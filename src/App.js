@@ -6,23 +6,35 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
+      switchVariable: false,
       quote: "",
       author: ""
     };
   }
 
   componentDidMount() {
-    fetch("https://favqs.com/api/qotd")
-      .then(response => response.json())
-      .then(data => {
-        const { author, body } = data.quote;
-        this.setState({
-          quote: body,
-          author: author
-        });
-      });
-    // console.log(quotes);
+    this.newQuote();
+    // this.fetchQuote();
   }
+
+  // fetchQuote = () => {
+  //   // let switchVar = false;
+  //   do {
+  //     fetch("https://favqs.com/api/qotd")
+  //       .then(response => response.json())
+  //       .then(data => {
+  //         const { author, body } = data.quote;
+  //         if (body.length + author.length <= 375) {
+  //           // switchVar = true;
+  //           this.setState({
+  //             switchVariable: true,
+  //             quote: body,
+  //             author: author
+  //           });
+  //         }
+  //       });
+  //   } while (this.state.switchVariable === true);
+  // };
 
   newQuote = () => {
     fetch("https://favqs.com/api/qotd")
