@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "tachyons";
+import "../../src/QuoteBox.css";
 
 class QuoteBox extends Component {
   // quoteLength = () => {
@@ -25,14 +26,18 @@ class QuoteBox extends Component {
     const { quote, author, newQuoteBtn } = this.props;
     return (
       // <div className="flex justify-around h-auto v-mid" id="background">
-      <div
-        className="mw5 mw7-ns center bg-light-gray pa3 ph5-ns ma0"
-        id="background"
-      >
-        <div className="ma4 pa4 ba bw1" id="quote-box">
-          <p id="text">{quote}</p>
-          <p id="author">{author}</p>
-          <button id="new-quote" onClick={newQuoteBtn}>
+      <div className="mw5 mw7-ns center ph5-ns ma0" id="background">
+        <div className="mt4 mb4 pa4" id="quote-box">
+          <p id="text">
+            <i className="fas fa-quote-left fa-2x pr3 pl3" />
+            {quote}
+          </p>
+          <p id="author">{"- " + author}</p>
+          <button
+            className="ma2 f6 grow no-underline br-pill ph3 pv2 mb2 dib white bg-black"
+            id="new-quote"
+            onClick={newQuoteBtn}
+          >
             New Quote
           </button>
           {/* <button onClick={this.quoteLength} id="tweet-quote"> */}
@@ -50,7 +55,7 @@ class QuoteBox extends Component {
             onClick={this.quoteLength}
             // href="https://twitter.com/intent/tweet"
             id="tweet-quote"
-            className="twitter-share-button"
+            className="twitter-share-button ma2 f6 grow no-underline br-pill ph3 pv2 mb2 dib white bg-black"
             data-size="large"
             data-hashtags="quote"
             hashtags="quote"

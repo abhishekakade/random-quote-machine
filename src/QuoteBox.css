@@ -1,0 +1,29 @@
+#quote-box {
+  background: whitesmoke;
+  border-radius: 5px;
+}
+
+#text {
+  color: #d0d0d0;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  transition: color 3s;
+}
+
+#author {
+  color: #dfdfdf;
+  text-align: right;
+  transition: color 3s;
+}
+
+#new-quote:focus {
+  outline: none;
+}
+
+#new-quote {
+  border: none;
+}
+
+#tweet-quote:focus {
+  outline: none;
+}

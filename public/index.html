@@ -13,6 +13,29 @@
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      body {
+        height: 100vh;
+        width: 100vw;
+        transition: background 2s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #root {
+        position: absolute;
+        top: 25%;
+        transform: translateY(-25%);
+      }
+    </style>
 
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
