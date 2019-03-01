@@ -1,19 +1,22 @@
 #quote-box {
   background: whitesmoke;
   border-radius: 5px;
+  font-family: "Bree Serif", serif;
 }
 
 #text {
-  color: #d0d0d0;
+  color: #808080;
   font-size: 1.2rem;
   line-height: 1.5;
   transition: color 3s;
+  /* font-style: italic; */
 }
 
 #author {
-  color: #dfdfdf;
+  color: #a0a0a0;
   text-align: right;
   transition: color 3s;
+  /* font-style: italic; */
 }
 
 #new-quote:focus {
@@ -26,4 +29,67 @@
 
 #tweet-quote:focus {
   outline: none;
+}
+
+@media screen and (max-width: 550px) {
+  #quote-box {
+    padding: 1rem;
+  }
+
+  .fa-2x {
+    font-size: 1.2em;
+    padding-right: 0.5rem;
+  }
+
+  #author {
+    text-align: center;
+    font-size: 0.95rem;
+  }
+
+  #text {
+    font-size: 1.1rem;
+    line-height: 1.25;
+  }
+
+  #new-quote {
+    font-size: 0.8rem;
+  }
+
+  #tweet-quote {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 260px) {
+  #quote-box {
+    padding: 0.3rem;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .fa-2x {
+    font-size: 1em;
+    /* padding-right: 0.5rem; */
+    display: block;
+  }
+
+  #author {
+    text-align: center;
+    font-size: 0.75rem;
+  }
+
+  #text {
+    font-size: 0.85rem;
+    line-height: 1.25;
+  }
+
+  #new-quote {
+    font-size: 0.75rem;
+    margin-top: 0.2rem;
+  }
+
+  #tweet-quote {
+    font-size: 0.75rem;
+    margin-top: 0.2rem;
+  }
 }

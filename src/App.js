@@ -6,7 +6,6 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      switchVariable: false,
       quote:
         "If you are reading this, your device has probably lost access to the internet. Try refreshing or try again later.",
       author: "Developer"
@@ -15,27 +14,8 @@ class App extends Component {
 
   componentDidMount() {
     this.newQuote();
-    // this.fetchQuote();
+    // this.quoteLength();
   }
-
-  // fetchQuote = () => {
-  //   // let switchVar = false;
-  //   do {
-  //     fetch("https://favqs.com/api/qotd")
-  //       .then(response => response.json())
-  //       .then(data => {
-  //         const { author, body } = data.quote;
-  //         if (body.length + author.length <= 375) {
-  //           // switchVar = true;
-  //           this.setState({
-  //             switchVariable: true,
-  //             quote: body,
-  //             author: author
-  //           });
-  //         }
-  //       });
-  //   } while (this.state.switchVariable === true);
-  // };
 
   newQuote = () => {
     fetch("https://favqs.com/api/qotd")
@@ -70,36 +50,51 @@ class App extends Component {
       "#db9b72",
       "#111111"
     ];
-    const oneRandomColor = colors[Math.floor(Math.random() * colors.length)];
 
-    const authorVar = document.getElementById("author");
-    const textVar = document.getElementById("text");
-    // console.log(document.body.style.background);
-    // console.log(oneRandomColor);
+    // grab color randomly
+    let oneRandomColor = colors[Math.floor(Math.random() * colors.length)];
 
-    // if(document.body.style.background) {
-
-    // }
-    // changing body background color
+    // changing element colors
     document.getElementsByTagName("body")[0].style.background = oneRandomColor;
-    // document.getElementsByTagName("body")[0].style.background = "#2c3e50";
-
-    // loop to change color
-    const htmlElemArray = [authorVar, textVar];
-    htmlElemArray.forEach(elem => {
-      elem.style.color = oneRandomColor;
-      // elem.style.color = "#2c3e50";
-    });
+    document.getElementById("author").style.color = oneRandomColor;
+    document.getElementById("text").style.color = oneRandomColor;
   };
+
+  // quoteLength = e => {
+  //   console.log(e);
+
+  //   if (this.state.quote.length > 26) {
+  // const tweetText = document.getElementById("tweet").textContent;
+  // console.log(tweetText);
+
+  // document.getElementById("tweet-quote").setAttribute("href", "#");
+  // document.getElementById("tweet-quote").removeAttribute("target");
+  // document.getElementById("long-tweet").style.display = "block";
+
+  // setTimeout(function() {
+  // document
+  //   .getElementById("tweet-quote")
+  //   .setAttribute(
+  //     "href",
+  //     `https://twitter.com/intent/tweet?text=${
+  //       this.state.quote
+  //     }%0A-&nbsp${this.state.author}.`
+  //   );
+  // document.getElementById("tweet-quote").setAttribute("target", "_blank");
+  //       document.getElementById("long-tweet").style.display = "block";
+  //     }, 3000);
+  //   }
+  // };
 
   render() {
     return (
       <div className="App tc ma0 mt6 v-mid">
-        {/* <h1 style={{ textShadow: "0 0 10px #ffffff" }}>Random Quote Machine</h1> */}
+        {/* <h1>Random Quote Machine</h1> */}
         <QuoteBox
           quote={this.state.quote}
           author={this.state.author}
           newQuoteBtn={this.newQuote}
+          // quoteLengthCheck={this.quoteLength}
         />
       </div>
     );

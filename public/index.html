@@ -21,6 +21,7 @@
     />
 
     <style>
+      @import url("https://fonts.googleapis.com/css?family=Bree+Serif");
       body {
         height: 100vh;
         width: 100vw;
@@ -34,6 +35,18 @@
         position: absolute;
         top: 25%;
         transform: translateY(-25%);
+      }
+
+      @media screen and (max-width: 550px) {
+        #root {
+          position: absolute;
+          top: 35%;
+          transform: translateY(-35%);
+        }
+
+        .mt6 {
+          margin-top: 1.5rem !important;
+        }
       }
     </style>
 
