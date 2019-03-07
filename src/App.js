@@ -2,13 +2,16 @@ import React, { Component } from "react";
 import QuoteBox from "../src/components/QuoteBox";
 import "tachyons";
 
+const errorQuote =
+  "If you are reading this, your device has probably lost access to the internet. Try refreshing or try again later.";
+const errorQuoteAuthor = "Developer";
+
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      quote:
-        "If you are reading this, your device has probably lost access to the internet. Try refreshing or try again later.",
-      author: "Developer"
+      quote: errorQuote,
+      author: errorQuoteAuthor
     };
   }
 
@@ -26,6 +29,13 @@ class App extends Component {
           quote: body,
           author: author
         });
+      })
+      .catch(err => {
+        this.setState({
+          quote: errorQuote,
+          author: errorQuoteAuthor
+        });
+        console.log(err);
       });
     this.changeColor();
   };
