@@ -2,6 +2,12 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Credits -
+
+API - [FavQs](https://favqs.com/api).
+
+Logo Vector Designed By [アヒルスタジオ on PNGtree](https://pngtree.com//freepng/yellow-rectangle-title-box_3292563.html).
+
 ## Available Scripts
 
 In the project directory, you can run:
