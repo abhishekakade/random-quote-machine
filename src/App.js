@@ -99,7 +99,16 @@ class App extends Component {
   render() {
     return (
       <div className="App tc ma0 mt6 v-mid">
-        {/* <h1>Random Quote Machine</h1> */}
+        <h1
+          style={{
+            display: "inline",
+            margin: "1rem",
+            borderBottom: "2px solid rgba(230, 230, 230, 0.7)",
+            textShadow: "0 0 20px rgba(240, 240, 240, 0.85)"
+          }}
+        >
+          Random Quotes
+        </h1>
         <QuoteBox
           quote={this.state.quote}
           author={this.state.author}

@@ -44,6 +44,32 @@
   outline: none;
 }
 
+@media screen and (min-width: 800px) {
+  #quote-box {
+    padding: 1.25rem;
+  }
+
+  .fa-2x {
+    font-size: 1.5em;
+    padding-right: 0.75rem;
+  }
+
+  #author {
+    text-align: center;
+    font-size: 1.15rem;
+  }
+
+  #text {
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+
+  #new-quote,
+  #tweet-quote {
+    font-size: 1.2rem;
+  }
+}
+
 @media screen and (max-width: 550px) {
   #quote-box {
     padding: 1rem;
@@ -64,10 +90,7 @@
     line-height: 1.25;
   }
 
-  #new-quote {
-    font-size: 0.8rem;
-  }
-
+  #new-quote,
   #tweet-quote {
     font-size: 0.8rem;
   }
@@ -96,11 +119,7 @@
     line-height: 1.25;
   }
 
-  #new-quote {
-    font-size: 0.75rem;
-    margin-top: 0.2rem;
-  }
-
+  #new-quote,
   #tweet-quote {
     font-size: 0.75rem;
     margin-top: 0.2rem;
