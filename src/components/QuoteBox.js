@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "tachyons";
 import "../../src/QuoteBox.css";
+import "../../src/fonts/icomoon.ttf";
+import "../../src/fontstyle.css";
 
 class QuoteBox extends Component {
   render() {
@@ -19,12 +21,14 @@ class QuoteBox extends Component {
       >
         <div className="mt4 mb4 pa4" id="quote-box">
           <p id="text">
-            <i className="fas fa-quote-left fa-2x pr3 pl3" />
+            {/* Removed font awesome icon and used icomoon icon to prevent unnecessary requests and 500kb downloads */}
+            <span className="icon-quote-left pr3 pl3" />
             {quote}
           </p>
+
           <p id="author">{"- " + author}</p>
           <button
-            className="ma2 f6 grow no-underline br-pill ph3 pv2 mb2 dib white bg-black"
+            className="ma2 grow no-underline br-pill ph3 pv2 mb2 dib white bg-black"
             id="new-quote"
             onClick={newQuoteBtn}
           >
@@ -41,7 +45,7 @@ class QuoteBox extends Component {
             }
             // onClick={quoteLengthCheck}
             id="tweet-quote"
-            className="twitter-share-button ma2 f6 grow no-underline br-pill ph3 pv2 mb2 dib white bg-black"
+            className="twitter-share-button ma2 grow no-underline br-pill ph3 pv2 mb2 dib white bg-black"
             data-size="large"
             data-hashtags="quote"
             hashtags="quote"

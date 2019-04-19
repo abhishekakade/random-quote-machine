@@ -68,6 +68,7 @@ class App extends Component {
     document.getElementsByTagName("body")[0].style.background = oneRandomColor;
     document.getElementById("author").style.color = oneRandomColor;
     document.getElementById("text").style.color = oneRandomColor;
+    document.getElementById("app-header").style.color = oneRandomColor;
   };
 
   // quoteLength = e => {
@@ -98,23 +99,30 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App tc ma0 mt6 v-mid">
-        <h1
-          style={{
-            display: "inline",
-            margin: "1rem",
-            borderBottom: "2px solid rgba(230, 230, 230, 0.7)",
-            textShadow: "0 0 20px rgba(240, 240, 240, 0.85)"
-          }}
-        >
-          Random Quotes
-        </h1>
-        <QuoteBox
-          quote={this.state.quote}
-          author={this.state.author}
-          newQuoteBtn={this.newQuote}
-          // quoteLengthCheck={this.quoteLength}
-        />
+      <div className="App tc ma0 v-mid">
+        <div id="divcenter">
+          <h1
+            id="app-header"
+            style={{
+              display: "inline",
+              fontFamily: "'Bree Serif', sans-serif",
+              margin: "1rem",
+              padding: "0.5rem 1rem",
+              borderRadius: "5px",
+              background: "whitesmoke",
+              textDecoration: "underline",
+              transition: "color 3s"
+            }}
+          >
+            Random Quotes
+          </h1>
+          <QuoteBox
+            quote={this.state.quote}
+            author={this.state.author}
+            newQuoteBtn={this.newQuote}
+            // quoteLengthCheck={this.quoteLength}
+          />
+        </div>
       </div>
     );
   }

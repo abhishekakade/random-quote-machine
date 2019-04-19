@@ -12,6 +12,10 @@
   /* font-style: italic; */
 }
 
+.icon-quote-left {
+  font-size: 1.35em;
+}
+
 #author {
   color: #a0a0a0;
   text-align: right;
@@ -36,7 +40,7 @@
     padding: 1.25rem;
   }
 
-  .fa-2x {
+  .icon-quote-left {
     font-size: 1.5em;
     padding-right: 0.75rem;
   }
@@ -57,13 +61,47 @@
   }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 600px) {
+  #quote-box {
+    padding: 1.15rem;
+  }
+
+  #app-header {
+    font-size: 1.5rem;
+  }
+
+  .icon-quote-left {
+    font-size: 1.2em;
+    padding-right: 0.75rem;
+  }
+
+  #author {
+    text-align: center;
+    font-size: 1.05rem;
+  }
+
+  #text {
+    font-size: 1.25rem;
+    /* line-height: 1.3; */
+  }
+
+  #new-quote,
+  #tweet-quote {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 374px) {
   #quote-box {
     padding: 1rem;
   }
 
-  .fa-2x {
-    font-size: 1.2em;
+  #app-header {
+    font-size: 1.25rem;
+  }
+
+  .icon-quote-left {
+    font-size: 1.1em;
     padding-right: 0.5rem;
   }
 
@@ -74,12 +112,12 @@
 
   #text {
     font-size: 1.1rem;
-    line-height: 1.25;
+    /* line-height: 1.25; */
   }
 
   #new-quote,
   #tweet-quote {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -90,7 +128,7 @@
     margin: 0;
   }
 
-  .fa-2x {
+  .icon-quote-left {
     font-size: 1em;
     /* padding-right: 0.5rem; */
     display: block;
@@ -103,7 +141,7 @@
 
   #text {
     font-size: 0.85rem;
-    line-height: 1.25;
+    /* line-height: 1.25; */
   }
 
   #new-quote,
