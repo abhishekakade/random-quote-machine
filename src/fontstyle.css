@@ -1,9 +1,9 @@
 @font-face {
+  font-display: swap;
   font-family: "icomoon";
   src: url("fonts/icomoon.ttf?nxjls") format("truetype");
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
 }
 
 [class^="icon-"],
