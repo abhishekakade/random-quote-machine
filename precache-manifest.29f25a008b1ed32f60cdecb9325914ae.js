@@ -24,7 +24,7 @@ self.__precacheManifest = [
     "url": "/random-quote-machine/static/css/2.f73da50d.chunk.css"
   },
   {
-    "revision": "ffbabfc9a5ebaba5817c839116f52232",
+    "revision": "07f7dd2132b48485b0d5b077367afd88",
     "url": "/random-quote-machine/index.html"
   }
 ];
