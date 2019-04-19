@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Bree Serif";
-  font-display: optional;
+  font-display: swap;
   font-style: normal;
   font-weight: 400;
   src: local("Bree Serif Regular"), local("BreeSerif-Regular"),
