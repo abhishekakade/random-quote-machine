@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "tachyons";
 import "../../src/QuoteBox.css";
 import "../../src/fonts/icomoon.ttf";
-import "../../src/fontstyle.css";
 
 class QuoteBox extends Component {
   render() {
