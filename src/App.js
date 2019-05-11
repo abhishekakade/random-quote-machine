@@ -17,7 +17,6 @@ class App extends Component {
 
   componentDidMount() {
     this.newQuote();
-    // this.quoteLength();
   }
 
   newQuote = () => {
@@ -71,38 +70,12 @@ class App extends Component {
     document.getElementById("app-header").style.color = oneRandomColor;
   };
 
-  // quoteLength = e => {
-  //   console.log(e);
-
-  //   if (this.state.quote.length > 26) {
-  // const tweetText = document.getElementById("tweet").textContent;
-  // console.log(tweetText);
-
-  // document.getElementById("tweet-quote").setAttribute("href", "#");
-  // document.getElementById("tweet-quote").removeAttribute("target");
-  // document.getElementById("long-tweet").style.display = "block";
-
-  // setTimeout(function() {
-  // document
-  //   .getElementById("tweet-quote")
-  //   .setAttribute(
-  //     "href",
-  //     `https://twitter.com/intent/tweet?text=${
-  //       this.state.quote
-  //     }%0A-&nbsp${this.state.author}.`
-  //   );
-  // document.getElementById("tweet-quote").setAttribute("target", "_blank");
-  //       document.getElementById("long-tweet").style.display = "block";
-  //     }, 3000);
-  //   }
-  // };
-
   render() {
     return (
-      <div className="App tc ma0 v-mid">
-        <div id="divcenter">
+      <div className='App tc ma0 v-mid'>
+        <div id='divcenter'>
           <h1
-            id="app-header"
+            id='app-header'
             style={{
               display: "inline",
               fontFamily: "'Bree Serif', sans-serif",
@@ -114,15 +87,14 @@ class App extends Component {
               transition: "color 3s"
             }}
           >
-            Random Quotes
-          </h1>
+            Random Quotes{" "}
+          </h1>{" "}
           <QuoteBox
             quote={this.state.quote}
             author={this.state.author}
             newQuoteBtn={this.newQuote}
-            // quoteLengthCheck={this.quoteLength}
-          />
-        </div>
+          />{" "}
+        </div>{" "}
       </div>
     );
   }
