@@ -10,6 +10,7 @@
     "react-scripts": "2.1.5"
   },
   "scripts": {
+    "flow": "flow",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
@@ -27,6 +28,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "flow-bin": "^0.98.1",
     "tachyons": "^4.10.0"
   }
 }
