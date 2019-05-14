@@ -1,3 +1,4 @@
+// @flow
 import React, { Component } from "react";
 import QuoteBox from "../src/components/QuoteBox";
 import "tachyons";
@@ -6,7 +7,16 @@ const errorQuote =
   "If you are reading this, your device has probably lost access to the internet. Try refreshing or try again later.";
 const errorQuoteAuthor = "Developer";
 
-class App extends Component {
+type AppProps = {
+  quote: string
+};
+
+type State = {
+  quote: string,
+  author: string
+};
+
+class App extends Component<AppProps, State> {
   constructor() {
     super();
     this.state = {
