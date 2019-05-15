@@ -5,9 +5,9 @@
   "private": true,
   "dependencies": {
     "gh-pages": "^2.0.1",
-    "react": "^16.8.2",
-    "react-dom": "^16.8.2",
-    "react-scripts": "2.1.5"
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "3.0.1"
   },
   "scripts": {
     "flow": "flow",
@@ -29,6 +29,6 @@
   ],
   "devDependencies": {
     "flow-bin": "^0.98.1",
-    "tachyons": "^4.10.0"
+    "tachyons": "^4.11.1"
   }
 }
